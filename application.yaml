@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
-kind: application
-metdata:
+kind: Application
+metadata:
   name: myapp-argo-application
   namespace: argocd
-spec: 
+spec:
   project: default
 
   source:
-    repoUrl: https://github.com/MergimRruka/argoTest.git
-    targetRevision: head
+    repoURL: https://github.com/MergimRruka/argoTest.git
+    targetRevision: HEAD
     path: dev
   destination:
     server: https://kubernetes.default.svc
@@ -16,7 +16,7 @@ spec:
 
   syncPolicy:
     syncOptions:
-    - CreateNameSpace=true
+    - CreateNamespace=true
 
     automated:
       selfHeal: true
