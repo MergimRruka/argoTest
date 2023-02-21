@@ -10,7 +10,7 @@ spec:
     repoURL: https://github.com/MergimRruka/argoTest.git
     targetRevision: HEAD
     path: dev
-  destination:
+  destination: 
     server: https://kubernetes.default.svc
     namespace: myapp
 
